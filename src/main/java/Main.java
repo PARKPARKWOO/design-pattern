@@ -1,6 +1,7 @@
 import iterator.Book;
 import iterator.BookShelf;
 import iterator.Iterator;
+import singleton.Singleton;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,5 +39,13 @@ public class Main {
         /**
          * Singleton 패턴
          */
+        System.out.println("Singleton");
+        Singleton singleton1 = Singleton.getSingleton();
+        Singleton singleton2 = Singleton.getSingleton();
+        if (singleton1.equals(singleton2)) {
+            System.out.println("같은 인스턴스 입니다.");
+        } else {
+            System.out.println("같은 인스턴스가 아닙니다.");
+        }
     }
 }
